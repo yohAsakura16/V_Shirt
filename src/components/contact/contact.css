@@ -1,0 +1,102 @@
+.contact_us_container {
+    height: var(--heght-vh);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.form-div {
+    width: 60vw;
+    border-radius: 1rem;
+    box-shadow: 0px -2px 5px 1px #949191;
+    background-color: var(--color-bg-2);
+    padding: 1rem;
+    margin: 0 auto;
+    position: relative;
+    bottom: -3rem;
+    z-index: 2;
+}
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+}
+input, textarea {
+    background-color: transparent;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    border: 2px solid var(--color-light);
+    resize: none;
+    color: var(--color-bg);
+}
+.contact_us_container .btn-primary {
+    padding: 0.75rem;
+    font-size: 1.5vw;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+}
+.contact_us_container .btn-primary:hover {
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+}
+.contact-content {
+    height: 100%;
+    padding: 5rem 2rem;
+    background-color: #0b1359;
+    color: #e2e1e1;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    place-content: space-evenly;
+    position: relative;
+    width: 100%;
+}
+.contact-content .info-content {
+    text-align: center;
+    font-size: 1.5vw;
+}
+.contact-content::before {
+    content: '';
+    border: 1px solid var(--color-light);
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    bottom: 10vh;
+    left: 0;
+    right: 0;
+}
+.info-content .info-title {
+    font-size: 2vw;
+    font-weight: 600;
+}
+.copy-rigth {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 3vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+}
+@media screen and (max-width: 600px) {
+    .form-div {
+        width: 80vw;
+    }
+    .contact-content {
+        height: 100%;
+        grid-template-columns: auto;
+        row-gap: 1rem;
+    }
+    .info-content .info-title {
+        font-size: 3vw;
+    }
+    .contact-content .info-content {
+        font-size: 2vw;
+    }
+    .copy-rigth {
+        font-size: 2.2vw;
+    }
+}

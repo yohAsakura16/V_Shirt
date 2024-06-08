@@ -1,0 +1,36 @@
+.aboutUs_container {
+    width: 100vw;
+}
+.aboutUs_content {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 0;
+}
+.aboutUs_content .img-div {
+    overflow: hidden;
+}
+.aboutUs_content .img-div img {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+}
+.aboutUs_content .info-content {
+    display: grid;
+    grid-template-rows: auto auto;
+    place-content: center;
+    margin-top: 0.5rem;
+}
+.aboutUs_content .info-content span {
+    text-align: center;
+}
+.aboutUs_content .info-content h3 {
+    font-size: 2vw;
+    font-weight: 600;
+}
+.aboutUs_content .info-content h4 {
+    font-size: 1.5vw;
+}

@@ -1,0 +1,158 @@
+.profile {
+    background: rgb(220,224,235);
+    background: linear-gradient(180deg, rgba(220,224,235,1) 0%, rgba(120,175,232,1) 100%);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    transition: all 1ms ease-in-out;
+    padding: 3rem;
+    margin: 0;
+}
+.profile-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 0 0 5rem;
+}
+.profile-content h2 {
+    font-size: 4vw;
+    opacity: 1;
+    animation: transformRigthToleft 1.2s;
+    transition: all 1.2s ease-out;
+    font-family: var(--font-family);
+    color: var(--color-bg-2);
+}
+.profile-content h5 {
+    font-size: 2vw;
+    opacity: 1;
+    animation: transformRigthToleft 1.2s;
+    transition: all 1.2s ease-out;
+    font-family: var(--font-family);
+    color: #3c3939;
+}
+.profile-content .order-btn {
+    opacity: 1;
+    animation: transformUpToDown 1.2s;
+    transition: all 1s ease-out;
+}
+@keyframes transformUpToDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-70px);
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: transformY(0);
+    }
+}
+@keyframes transformRigthToleft {
+    from {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    to {
+        opacity: 1;
+        transform: rotateY(0);
+    }
+}
+.profile-div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.profile-div .t-shirt {
+    transform: scale(1);
+    transition: all 1s ease-out;
+}
+.t-shirt {
+    position: absolute;
+    width: 23.5vw;
+    height: 23.5vw;
+}
+.profile-div .t-shirt:nth-child(1) ,.profile-div .t-shirt:nth-child(2) {
+    margin-top: 0.25rem;
+    margin-left: 0.05rem;
+    width: 23vw;
+    height: 23vw;
+}
+.profile-div .t-shirt:nth-child(1) {
+    --transform1: translateY(0vw) translateX(15vw) scale(0.8);
+    transform: var(--transform1);
+    animation: transform 1s;
+}
+.profile-div .t-shirt:nth-child(2) {
+    --transform2: translateY(0.2vw) translateX(9vw) scale(0.9);
+    transform: var(--transform2);
+    animation: transform2 1s;
+}
+@keyframes transform {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: var(--transform1);
+    }
+}
+@keyframes transform2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: var(--transform2);
+    }
+}
+@media screen and (max-width: 1000px) {
+    .profile {
+        backdrop-filter: blur(12px);
+        position: relative;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        place-items: center;
+    }
+    .profile-content {
+        order: 2;
+        position: fixed;
+        align-items: center;
+        padding: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 2;
+    }
+    .profile-div {
+        order: 1;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    }
+    .profile-content h2 {
+        font-size: 6vw;
+    }
+    .profile-content h5 {
+        font-size: 4vw;
+    }
+    .t-shirt {
+        width: 43.5vw;
+        height: 43.5vw;
+    }
+    .profile-div .t-shirt:nth-child(1) ,.profile-div .t-shirt:nth-child(2) {
+        width: 43vw;
+        height: 43vw;
+    }
+}
+@media screen and (max-width: 700px) {
+    .t-shirt {
+        width: 63.5vw;
+        height: 63.5vw;
+    }
+    .profile-div .t-shirt:nth-child(1) ,.profile-div .t-shirt:nth-child(2) {
+        width: 63vw;
+        height: 63vw;
+    }
+}

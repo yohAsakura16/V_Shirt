@@ -1,0 +1,72 @@
+.header {
+    background-color: #d1daea;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+    box-shadow: 0px 0px 11px 2px #91a3a8;
+}
+.page-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 2rem;
+}
+.page-nav a {
+    font-size: 1.2vw;
+    font-weight: 600;
+}
+.trali-icon {
+    min-width: 5vw;
+    display: flex;
+}
+.logo-div {
+    font-weight: 600;
+    font-size: 1.4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo {
+    font-family: var(--font-family-logo);
+    font-size: 2.2vw;
+    margin-right: 5px;
+}
+.nav-page-icon {
+    display: none;
+}
+@media screen and (max-width: 800px) {
+    .nav-page-icon {
+        display: block;
+    }
+    .page-nav {
+        position: absolute;
+        background-color: var(--color-bg-2);
+        right: 0.5rem;
+        top: 3rem;
+        flex-direction: column;
+        padding-top: 0.5rem;
+        border-radius: 0.25rem;
+    }
+    a.active::before {
+        bottom: 5px;
+    }
+    .page-nav a {
+        padding: 0 1rem 0.5rem;
+        font-size: 2vw;
+    }
+    .header {
+        padding: 0.5rem 1rem;
+        justify-content: space-between;
+    }
+    .logo-div {
+        font-size: 2vw;
+    }
+    .logo {
+        font-size: 2.8vw;
+    }
+}

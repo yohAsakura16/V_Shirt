@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Quicksand:wght@300;400;500;600&family=Rubik+Maps&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+:root{
+  /* background color */
+  --color-bg: #101a1f;
+  --color-bg-2: #fff;
+  --color-primary: #1886d4;
+  --color-light: rgb(148 145 145 / 60%);
+  /* variant color */
+  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  /* width */
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+  --width-vw: 100vw;
+  /* height */
+  --heght-vh: 100vh;
+  /* font size */
+  --font-size: 1.5vw;
+  /* font family */
+  --font-family: "Quicksand", sans-serif;
+  --font-family-logo: "Cedarville Cursive", sans-serif;
+  /* transition */
+  --transition-all-4ms : all 400ms ease;
+}
+html {
+  scroll-behavior: smooth;
+}
+.App {
+  height: var(--heght-vh);
+  width: var(--width-vw);
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--color-bg-2);
+  color: var(--color-bg);
+  font-family: var(--font-family);
+  line-height: 1.5;
+  width: 100vw;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* ================= GENEARL STYLES ================= */
+.container {
+  margin: 0 auto;
+}
+h1, h2, h3, h4, h5 {
+  font-weight: 500;
+}
+h1 {
+  font-size: 5vw;
+}
+section {
+  margin-top: 4rem;
+  padding-top: 1rem;
+}
+section > h2, section > h5 {
+  text-align: center;
+  color: var(--color-light);
+}
+/* Page Title*/
+section > h2 {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 4vw;
+}
+/* Page Sub Title*/
+section > h5 {
+  font-size: 1vw;
+  font-weight: 600;
+}
+.text-light {
+  color: var(--color-light);
+}
+a {
+  color: var(--color-bg);
+  transition: var(--transition-all-4ms);
+  cursor: pointer;
+  position: relative;
+}
+a.active::before {
+  content: '';
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+  width: 50%;
+  display: block;
+  bottom: 0;
+  position: absolute;
+}
+a.active,a:hover {
+  color: var(--color-primary);
+}
+.btn {
+  width: max-content;
+  display: inline-block;
+  color: var(--color-bg-2);
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  background-color: var(--color-primary);
+  transition: var(--transition-all-4ms);
+  font-weight: 600;
+  font-size: 2vw;
+}
+.btn:hover {
+  background-color: var(--color-bg-2);
+  color: var(--color-primary);
+  border-color: transparent;
+}
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-bg-2);
+}
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 800px) {
+  body {
+    line-height: 1.5;
+  } 
+}
